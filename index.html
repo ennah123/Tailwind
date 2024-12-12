@@ -6,10 +6,40 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<style>html{overscroll-behavior: none;}</style>
+<style>
+    html{
+        overscroll-behavior: none;
+    }
+    @media (max-width: 639px) {
+        header{
+            transition: all 0.3s;
+            background-color: gainsboro;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        header .flex{
+            display: none;
+        }
+        header button{
+            display: none;
+        }
+        header #shartat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+        }
+        #category{
+            font-size: small;
+            width: 60px;
+            padding: 5px;
+
+        }
+    }
+</style>
 <body class="bg-gray-100">
-<!-- header -->
-<header class="grid grid-cols-3 place-items-center h-20  ">
+<header class="  sm:flex justify-center lg:grid lg:grid-cols-3 lg:place-items-center h-20">
     <div class="flex">
         <p class="font-bold text-lg">Men</p>&ensp;&ensp;&ensp;
         <p class="font-bold text-lg">Women</p>&ensp;&ensp;&ensp;
@@ -21,27 +51,33 @@
     <button class="transition-all duration-300 px-4 w-28 py-2 font-bold  text-black 
                     border-2 border-black  rounded-3xl hover:bg-black hover:text-white"
     >Log in</button>
+    <div id="shartat" class="w-16 h-12 sm:invisible md:invisible lg:invisible">
+        <div class="w-8 h-1 mt-1 text-zinc-50 bg-black"></div>
+        <div class="w-8 h-1 mt-1 text-zinc-50 bg-black"></div>
+        <div class="w-8 h-1 mt-1 text-zinc-50 bg-black"></div>
+    </div>
 </header>
 <br><br><br>
-<!-- section -->
 <section>
     <div>
-        <h1 class="text-center text-6xl font-bold">MAN CLOTHING COLLECTION</h1>
+        <center>
+        <h1 class="text-center text-3xl lg:text-6xl font-bold ">MAN CLOTHING COLLECTION</h1>
         <br>
-        <p class="font-bold text-lg text-zinc-500 text-center">
-            Find everything you need to look and feel your best, and shop the latest men's <br> fashion and lifestyle products
+        <p class="font-bold text-xs pl-7 pr-7 text-zinc-500 lg:w-3/6 lg:text-lg">
+            Find everything you need to look and feel your best and shop the latest men's fashion and lifestyle products
         </p>
         <br>
         <div class="flex justify-center">
-        <button class="transition-all text-white bg-black duration-300 font-bold border-2 border-black p-2 w-24 rounded-full">Tshirt</button>&ensp;&ensp;
-        <button class="transition-all duration-300 font-bold border-2 border-black p-2 w-24 rounded-full hover:bg-black hover:text-white">Jacket</button>&ensp;&ensp;
-        <button class="transition-all duration-300 font-bold border-2 border-black p-2 w-24 rounded-full hover:bg-black hover:text-white">Pants</button>&ensp;&ensp;
-        <button class="transition-all duration-300 font-bold border-2 border-black p-2 w-24 rounded-full hover:bg-black hover:text-white">Hoodie</button>&ensp;&ensp;
-        <button class="transition-all duration-300 font-bold border-2 border-black p-2 w-24 rounded-full hover:bg-black hover:text-white">Short</button>
+        <button id="category" class="transition-all text-white bg-black duration-300 font-bold border-2 border-black p-2 lg:w-24 rounded-full">Tshirt</button>
+        <button id="category" class="transition-all duration-300 ml-3 font-bold border-2 border-black p-2 lg:w-24 rounded-full hover:bg-black hover:text-white">Jacket</button>
+        <button id="category" class="transition-all duration-300 ml-3 font-bold border-2 border-black p-2 lg:w-24 rounded-full hover:bg-black hover:text-white">Pants</button>
+        <button id="category" class="transition-all duration-300 ml-3 font-bold border-2 border-black p-2 lg:w-24 rounded-full hover:bg-black hover:text-white">Hoodie</button>
+        <button id="category" class="transition-all duration-300 ml-3 font-bold border-2 border-black p-2 lg:w-24 rounded-full hover:bg-black hover:text-white">Short</button>
         </div>
+    </center>
     </div>
     <br><br>
-    <div class="flex justify-center">
+    <div class="grid gap-10 justify-center lg:flex ">
         <div>
             <img src="T-Shirts/T-shirt1.jpg" class="rounded-2xl m-2" alt="t" width="350px">
             <br>
